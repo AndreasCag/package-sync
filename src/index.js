@@ -1,6 +1,6 @@
 const fs = require('fs');
 const crypto = require('crypto');
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 const options = require('./options');
 
 const getHash = data => (
@@ -26,10 +26,16 @@ if (options.mode === 'update') {
   if (previousPackageHash !== packageHash) {
     throw new Error('Package hashes don\'t match! Update your packages.');
   }
-} else {
+} else if (options.mode === 'install-on-invalid') {
   const previousPackageHash = fs.readFileSync(options.pathToCacheFile, 'utf-8');
 
-  if (previousPackageHash === packageHash) {
-    exec('npm i');
+  if (previousPackageHash !== packageHash) {
+    console.log('Install new packages...');
+    const data = execSync('npm i');
+    console.log(data.toString('utf-8'));
+
+    fs.writeFileSync(options.pathToCacheFile, packageHash);
   }
+} else {
+  throw new Error(`Unrecognized mode: ${options.mode}`);
 }

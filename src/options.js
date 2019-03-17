@@ -3,7 +3,7 @@ const path = require('path');
 
 const defaultCacheFolder = 'node_modules/.cache/package-sync';
 const packageFilename = 'package.json';
-const defaultCurrentWorkingDir = process.pwd();
+const defaultCurrentWorkingDir = process.cwd();
 
 const availableOptions = [
   'update',

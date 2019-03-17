@@ -4,7 +4,10 @@
   "description": "Helps to keep packages in sync inside your team",
   "main": "src/index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "update": "node ./src/index.js --update",
+    "check": "node ./src/index.js --check",
+    "install-on-invalid": "node ./src/index.js --install-on-invalid"
   },
   "bin": {
     "package-sync": "./src/index.js"
@@ -26,7 +29,8 @@
   },
   "homepage": "https://github.com/AndreasCag/package-sync#readme",
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "lodash": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^5.3.0",
