@@ -1,0 +1,25 @@
+{
+  "name": "package-sync",
+  "version": "1.0.0",
+  "description": "Helps to keep packages in sync inside your team",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreasCag/package-sync.git"
+  },
+  "keywords": [
+    "package",
+    "sync",
+    "package-sync",
+    "synchronise"
+  ],
+  "author": "AndreasCag",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndreasCag/package-sync/issues"
+  },
+  "homepage": "https://github.com/AndreasCag/package-sync#readme"
+}
