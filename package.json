@@ -1,6 +1,6 @@
 {
   "name": "package-sync",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Helps to keep packages in sync inside your team",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
